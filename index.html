@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ฐิติรัตน์ ปู่เกิด | Portfolio</title>
+
+    <!-- =====================================================
+         TAILWIND CSS
+    ====================================================== -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         TAILWIND CONFIG
+    ====================================================== -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+
+                    colors: {
+                        pinkmain: '#ec4899',
+                        pinklight: '#fce7f3',
+                        pinksoft: '#fdf2f8',
+                        pinkdark: '#be185d'
+                    },
+
+                    fontFamily: {
+                        thai: ['Noto Sans Thai', 'sans-serif']
+                    }
+
+                }
+            }
+        }
+    </script>
+
+
+    <!-- =====================================================
+         CUSTOM CSS
+    ====================================================== -->
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans Thai', sans-serif;
+        }
+
+        /* Hero Background */
+        .hero-bg {
+
+            background:
+                linear-gradient(
+                    rgba(236, 72, 153, 0.82),
+                    rgba(190, 24, 93, 0.90)
+                ),
+
+                url('https://placehold.co/1920x1080/fbcfe8/831843?text=Triam+Udom+Portfolio');
+
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        /* Glass Effect */
+        .glass {
+
+            background: rgba(255, 255, 255, 0.90);
+
+            backdrop-filter: blur(10px);
+
+        }
+
+
+        /* Pink Gradient */
+        .pink-gradient {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ec4899,
+                    #db2777,
+                    #be185d
+                );
+
+        }
+
+
+        /* Card Animation */
+        .card-hover {
+
+            transition: all 0.3s ease;
+
+        }
+
+
+        .card-hover:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 20px 35px rgba(236, 72, 153, 0.18);
+
+        }
+
+
+        /* Mobile Menu Link */
+        .mobile-link {
+
+            color: #374151;
+
+            font-weight: 500;
+
+        }
+
+
+        .mobile-link:hover {
+
+            color: #ec4899;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="bg-white text-gray-800">
+
+
+    <!-- =====================================================
+         HEADER / NAVIGATION
+    ====================================================== -->
+
+    <header
+        class="fixed top-0 left-0 w-full z-50
+               bg-white/95 backdrop-blur
+               shadow-sm">
+
+        <nav
+            class="max-w-7xl mx-auto
+                   px-5 py-4
+                   flex items-center
+                   justify-between">
+
+
+            <!-- LOGO -->
+
+            <a href="#home"
+               class="flex items-center gap-3">
+
+                <div
+                    class="w-11 h-11 rounded-full
+                           pink-gradient
+                           text-white
+                           flex items-center
+                           justify-center
+                           font-bold text-lg">
+
+                    ฐ
+
+                </div>
+
+
+                <div>
+
+                    <h1
+                        class="font-bold text-pinkdark">
+
+                        ฐิติรัตน์ ปู่เกิด
+
+                    </h1>
+
+
+                    <p class="text-xs text-gray-500">
+
+                        Student Portfolio
+
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- DESKTOP MENU -->
+
+            <div
+                class="hidden md:flex
+                       items-center gap-7
+                       text-sm font-medium">
+
+                <a href="#home"
+                   class="hover:text-pinkmain transition">
+
+                    หน้าแรก
+
+                </a>
+
+
+                <a href="#about"
+                   class="hover:text-pinkmain transition">
+
+                    เกี่ยวกับฉัน
+
+                </a>
+
+
+                <a href="#skills"
+                   class="hover:text-pinkmain transition">
+
+                    ทักษะ
+
+                </a>
+
+
+                <a href="#projects"
+                   class="hover:text-pinkmain transition">
+
+                    ผลงาน
+
+                </a>
+
+
+                <a href="#goal"
+                   class="hover:text-pinkmain transition">
+
+                    เป้าหมาย
+
+                </a>
+
+
+                <a href="#contact"
+                   class="hover:text-pinkmain transition">
+
+                    ติดต่อ
+
+                </a>
+
+            </div>
+
+
+            <!-- MOBILE BUTTON -->
+
+            <button
+                id="menuBtn"
+                class="md:hidden
+                       text-pinkdark
+                       text-2xl">
+
+                ☰
+
+            </button>
+
+        </nav>
+
+
+        <!-- MOBILE MENU -->
+
+        <div
+            id="mobileMenu"
+            class="hidden md:hidden
+                   bg-white border-t">
+
+            <div
+                class="flex flex-col
+                       px-6 py-4 gap-4">
+
+
+                <a href="#home"
+                   class="mobile-link">
+
+                    หน้าแรก
+
+                </a>
+
+
+                <a href="#about"
+                   class="mobile-link">
+
+                    เกี่ยวกับฉัน
+
+                </a>
+
+
+                <a href="#skills"
+                   class="mobile-link">
+
+                    ทักษะ
+
+                </a>
+
+
+                <a href="#projects"
+                   class="mobile-link">
+
+                    ผลงาน
+
+                </a>
+
+
+                <a href="#goal"
+                   class="mobile-link">
+
+                    เป้าหมาย
+
+                </a>
+
+
+                <a href="#contact"
+                   class="mobile-link">
+
+                    ติดต่อ
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <section
+        id="home"
+        class="hero-bg
+               min-h-screen
+               flex items-center
+               pt-24">
+
+
+        <div
+            class="max-w-7xl
+                   mx-auto
+                   px-6
+                   py-20
+                   w-full">
+
+
+            <div
+                class="grid md:grid-cols-2
+                       gap-12
+                       items-center">
+
+
+                <!-- HERO TEXT -->
+
+                <div class="text-white">
+
+
+                    <p
+                        class="text-pink-100
+                               font-medium
+                               mb-4">
+
+                        STUDENT PORTFOLIO
+
+                    </p>
+
+
+                    <h2
+                        class="text-4xl sm:text-5xl
+                               lg:text-6xl
+                               font-extrabold
+                               leading-tight
+                               mb-6">
+
+                        ฐิติรัตน์
+
+                        <br>
+
+                        <span class="text-pink-100">
+
+                            ปู่เกิด
+
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="text-xl sm:text-2xl
+                               font-medium mb-5">
+
+                        Dream Big • Learn More • Be Better
+
+                    </p>
+
+
+                    <p
+                        class="text-pink-50
+                               text-base sm:text-lg
+                               leading-relaxed
+                               max-w-xl
+                               mb-8">
+
+                        นักเรียนชั้นมัธยมศึกษาปีที่ 3
+                        ผู้มีความสนใจด้านวิทยาศาสตร์
+                        คณิตศาสตร์ และการพัฒนาตนเอง
+                        พร้อมมุ่งมั่นก้าวเข้าสู่
+                        โรงเรียนเตรียมอุดมศึกษา
+
+                    </p>
+
+
+                    <!-- BUTTONS -->
+
+                    <div
+                        class="flex flex-wrap gap-4">
+
+
+                        <a href="#projects"
+                           class="bg-white
+                                  text-pinkdark
+                                  px-7 py-3
+                                  rounded-full
+                                  font-bold
+                                  shadow-lg
+                                  hover:bg-pink-50
+                                  transition">
+
+                            ดูผลงานของฉัน
+
+                        </a>
+
+
+                        <a href="#about"
+                           class="border-2
+                                  border-white
+                                  text-white
+                                  px-7 py-3
+                                  rounded-full
+                                  font-bold
+                                  hover:bg-white
+                                  hover:text-pinkdark
+                                  transition">
+
+                            รู้จักฉัน
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROFILE -->
+
+                <div
+                    class="flex justify-center">
+
+
+                    <div class="relative">
+
+
+                        <div
+                            class="absolute inset-0
+                                   bg-pink-200
+                                   rounded-3xl
+                                   rotate-6
+                                   opacity-50">
+                        </div>
+
+
+                        <div
+                            class="relative
+                                   glass
+                                   rounded-3xl
+                                   p-5
+                                   shadow-2xl
+                                   max-w-sm">
+
+
+                            <img
+                                src="https://placehold.co/500x600/fce7f3/be185d?text=Your+Photo"
+                                alt="รูปโปรไฟล์ ฐิติรัตน์ ปู่เกิด"
+                                class="rounded-2xl w-full">
+
+
+                            <div
+                                class="text-center
+                                       py-4">
+
+
+                                <h3
+                                    class="font-bold
+                                           text-xl
+                                           text-pinkdark">
+
+                                    ฐิติรัตน์ ปู่เกิด
+
+                                </h3>
+
+
+                                <p
+                                    class="text-gray-500
+                                           text-sm mt-1">
+
+                                    นักเรียนชั้นมัธยมศึกษาปีที่ 3
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SCHOOL INFORMATION
+    ====================================================== -->
+
+    <section
+        class="bg-pink-50
+               py-8">
+
+
+        <div
+            class="max-w-5xl
+                   mx-auto
+                   px-6
+                   text-center">
+
+
+            <p
+                class="text-sm
+                       text-pinkdark
+                       mb-2">
+
+                CURRENT SCHOOL
+
+            </p>
+
+
+            <h3
+                class="text-xl
+                       md:text-2xl
+                       font-bold
+                       text-gray-800">
+
+                โรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย กำแพงเพชร
+
+            </h3>
+
+
+            <p
+                class="text-gray-500
+                       mt-2">
+
+                Princess Chulabhorn Science High School
+                Kamphaeng Phet
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ABOUT ME
+    ====================================================== -->
+
+    <section
+        id="about"
+        class="py-20 bg-white">
+
+
+        <div
+            class="max-w-7xl
+                   mx-auto
+                   px-6">
+
+
+            <!-- TITLE -->
+
+            <div
+                class="text-center
+                       mb-14">
+
+
+                <p
+                    class="text-pinkmain
+                           font-semibold">
+
+                    ABOUT ME
+
+                </p>
+
+
+                <h2
+                    class="text-3xl
+                           md:text-4xl
+                           font-bold mt-2">
+
+                    เกี่ยวกับฉัน
+
+                </h2>
+
+
+                <div
+                    class="w-20 h-1
+                           bg-pinkmain
+                           mx-auto mt-4
+                           rounded-full">
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="grid md:grid-cols-2
+                       gap-12
+                       items-center">
+
+
+                <!-- IMAGE -->
+
+                <div>
+
+                    <img
+                        src="https://placehold.co/700x500/fce7f3/be185d?text=Student+Life"
+                        alt="กิจกรรมของนักเรียน"
+                        class="rounded-3xl
+                               shadow-xl
+                               w-full">
+
+                </div>
+
+
+                <!-- TEXT -->
+
+                <div>
+
+
+                    <h3
+                        class="text-2xl
+                               font-bold
+                               text-pinkdark
+                               mb-5">
+
+                        สวัสดีค่ะ
+                        ฉันชื่อ ฐิติรัตน์ ปู่เกิด
+
+                    </h3>
+
+
+                    <p
+                        class="text-gray-600
+                               leading-relaxed
+                               mb-5">
+
+                        ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 3
+                        โรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย
+                        กำแพงเพชร
+
+                    </p>
+
+
+                    <p
+                        class="text-gray-600
+                               leading-relaxed
+                               mb-5">
+
+                        ฉันเป็นคนที่มีความสนใจในการเรียนรู้สิ่งใหม่ ๆ
+                        โดยเฉพาะด้านวิทยาศาสตร์ คณิตศาสตร์
+                        เทคโนโลยี และกิจกรรมที่ช่วยพัฒนาทักษะ
+                        การคิดวิเคราะห์และการแก้ปัญหา
+
+                    </p>
+
+
+                    <p
+                        class="text-gray-600
+                               leading-relaxed">
+
+                        เป้าหมายของฉันคือการสอบเข้าเรียนต่อ
+                        โรงเรียนเตรียมอุดมศึกษา
+                        เพื่อพัฒนาศักยภาพของตนเอง
+                        และเตรียมความพร้อมสำหรับการศึกษาต่อ
+                        ในระดับมหาวิทยาลัยในอนาคต
+
+                    </p>
+
+
+                    <!-- QUOTE -->
+
+                    <div
+                        class="mt-7
+                               border-l-4
+                               border-pinkmain
+                               bg-pink-50
+                               p-5
+                               rounded-r-xl">
+
+
+                        <p
+                            class="text-pinkdark
+                                   font-medium
+                                   italic">
+
+                            “ตั้งเป้าหมายให้ชัดเจน
+                            พยายามให้เต็มที่
+                            และไม่หยุดพัฒนาตัวเอง”
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SKILLS
+    ====================================================== -->
+
+    <section
+        id="skills"
+        class="py-20
+               bg-pink-50">
+
+
+        <div
+            class="max-w-7xl
+                   mx-auto
+                   px-6">
+
+
+            <div
+                class="text-center
+                       mb-14">
+
+
+                <p
+                    class="text-pinkmain
+                           font-semibold">
+
+                    MY SKILLS
+
+                </p>
+
+
+                <h2
+                    class="text-3xl
+                           md:text-4xl
+                           font-bold mt-2">
+
+                    ทักษะและความสามารถ
+
+                </h2>
+
+
+                <div
+                    class="w-20 h-1
+                           bg-pinkmain
+                           mx-auto mt-4
+                           rounded-full">
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="grid md:grid-cols-2
+                       gap-8">
+
+
+                <!-- ACADEMIC SKILLS -->
+
+                <div
+                    class="bg-white
+                           p-7
+                           rounded-2xl
+                           shadow-sm">
+
+
+                    <h3
+                        class="text-xl
+                               font-bold
+                               mb-6
+                               text-pinkdark">
+
+                        📚 Academic Skills
+
+                    </h3>
+
+
+                    <!-- MATH -->
+
+                    <div class="mb-6">
+
+
+                        <div
+                            class="flex
+                                   justify-between
+                                   mb-2">
+
+
+                            <span
+                                class="font-medium">
+
+                                คณิตศาสตร์
+
+                            </span>
+
+
+                            <span
+                                class="text-pinkmain">
+
+                                85%
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="h-3
+                                   bg-pink-100
+                                   rounded-full">
+
+
+                            <div
+                                class="h-3
+                                       bg-pinkmain
+                                       rounded-full"
+                                style="width:85%">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SCIENCE -->
+
+                    <div class="mb-6">
+
+
+                        <div
+                            class="flex
+                                   justify-between
+                                   mb-2">
+
+
+                            <span
+                                class="font-medium">
+
+                                วิทยาศาสตร์
+
+                            </span>
+
+
+                            <span
+                                class="text-pinkmain">
+
+                                85%
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="h-3
+                                   bg-pink-100
+                                   rounded-full">
+
+
+                            <div
+                                class="h-3
+                                       bg-pinkmain
+                                       rounded-full"
+                                style="width:85%">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ENGLISH -->
+
+                    <div>
+
+
+                        <div
+                            class="flex
+                                   justify-between
+                                   mb-2">
+
+
+                            <span
+                                class="font-medium">
+
+                                ภาษาอังกฤษ
+
+                            </span>
+
+
+                            <span
+                                class="text-pinkmain">
+
+                                75%
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="h-3
+                                   bg-pink-100
+                                   rounded-full">
+
+
+                            <div
+                                class="h-3
+                                       bg-pinkmain
+                                       rounded-full"
+                                style="width:75%">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- OTHER SKILLS -->
+
+                <div
+                    class="bg-white
+                           p-7
+                           rounded-2xl
+                           shadow-sm">
+
+
+                    <h3
+                        class="text-xl
+                               font-bold
+                               mb-6
+                               text-pinkdark">
+
+                        🛠️ Other Skills
+
+                    </h3>
+
+
+                    <div
+                        class="flex
+                               flex-wrap
+                               gap-3">
+
+
+                        <span
+                            class="px-4 py-2
+                                   bg-pink-100
+                                   text-pinkdark
+                                   rounded-full">
+
+                            Problem Solving
+
+                        </span>
+
+
+                        <span
+                            class="px-4 py-2
+                                   bg-pink-100
+                                   text-pinkdark
+                                   rounded-full">
+
+                            Teamwork
+
+                        </span>
+
+
+                        <span
+                            class="px-4 py-2
+                                   bg-pink-100
+                                   text-pinkdark
+                                   rounded-full">
+
+                            Communication
+
+                        </span>
+
+
+                        <span
+                            class="px-4 py-2
+                                   bg-pink-100
+                                   text-pinkdark
+                                   rounded-full">
+
+                            Creativity
+
+                        </span>
+
+
+                        <span
+                            class="px-4 py-2
+                                   bg-pink-100
+                                   text-pinkdark
+                                   rounded-full">
+
+                            STEM
+
+                        </span>
+
+
+                        <span
+                            class="px-4 py-2
+                                   bg-pink-100
+                                   text-pinkdark
+                                   rounded-full">
+
+                            Presentation
+
+                        </span>
+
+
+                        <span
+                            class="px-4 py-2
+                                   bg-pink-100
+                                   text-pinkdark
+                                   rounded-full">
+
+                            Leadership
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROJECTS / ACTIVITIES
+    ====================================================== -->
+
+    <section
+        id="projects"
+        class="py-20
+               bg-white">
+
+
+        <div
+            class="max-w-7xl
+                   mx-auto
+                   px-6">
+
+
+            <!-- TITLE -->
+
+            <div
+                class="text-center
+                       mb-14">
+
+
+                <p
+                    class="text-pinkmain
+                           font-semibold">
+
+                    MY PORTFOLIO
+
+                </p>
+
+
+                <h2
+                    class="text-3xl
+                           md:text-4xl
+                           font-bold mt-2">
+
+                    ผลงานและกิจกรรม
+
+                </h2>
+
+
+                <p
+                    class="text-gray-500
+                           mt-4">
+
+                    ผลงานและกิจกรรมที่แสดงถึงความสนใจ
+                    ความสามารถ และการพัฒนาตนเอง
+
+                </p>
+
+
+                <div
+                    class="w-20 h-1
+                           bg-pinkmain
+                           mx-auto mt-4
+                           rounded-full">
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT GRID -->
+
+            <div
+                class="grid
+                       sm:grid-cols-2
+                       lg:grid-cols-3
+                       gap-7">
+
+
+
+                <!-- PROJECT 1 -->
+
+                <div
+                    class="bg-white
+                           border
+                           rounded-2xl
+                           overflow-hidden
+                           card-hover">
+
+
+                    <img
+                        src="https://placehold.co/600x400/fce7f3/be185d?text=Science+Project"
+                        alt="โครงงานวิทยาศาสตร์"
+                        class="w-full h-52
+                               object-cover">
+
+
+                    <div class="p-6">
+
+
+                        <span
+                            class="text-xs
+                                   bg-pink-100
+                                   text-pinkdark
+                                   px-3 py-1
+                                   rounded-full">
+
+                            Science
+
+                        </span>
+
+
+                        <h3
+                            class="font-bold
+                                   text-lg mt-4">
+
+                            โครงงานวิทยาศาสตร์
+
+                        </h3>
+
+
+                        <p
+                            class="text-gray-500
+                                   text-sm mt-2">
+
+                            ฝึกกระบวนการตั้งสมมติฐาน
+                            ทดลอง วิเคราะห์ข้อมูล
+                            และนำเสนอผลการทดลอง
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 2 -->
+
+                <div
+                    class="bg-white
+                           border
+                           rounded-2xl
+                           overflow-hidden
+                           card-hover">
+
+
+                    <img
+                        src="https://placehold.co/600x400/fce7f3/be185d?text=STEM+Camp"
+                        alt="ค่าย STEM"
+                        class="w-full h-52
+                               object-cover">
+
+
+                    <div class="p-6">
+
+
+                        <span
+                            class="text-xs
+                                   bg-pink-100
+                                   text-pinkdark
+                                   px-3 py-1
+                                   rounded-full">
+
+                            Activity
+
+                        </span>
+
+
+                        <h3
+                            class="font-bold
+                                   text-lg mt-4">
+
+                            เข้าร่วมค่าย STEM
+
+                        </h3>
+
+
+                        <p
+                            class="text-gray-500
+                                   text-sm mt-2">
+
+                            เรียนรู้การประยุกต์ใช้
+                            วิทยาศาสตร์ เทคโนโลยี
+                            และการทำงานร่วมกับผู้อื่น
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 3 -->
+
+                <div
+                    class="bg-white
+                           border
+                           rounded-2xl
+                           overflow-hidden
+                           card-hover">
+
+
+                    <img
+                        src="https://placehold.co/600x400/fce7f3/be185d?text=Mathematics"
+                        alt="กิจกรรมคณิตศาสตร์"
+                        class="w-full h-52
+                               object-cover">
+
+
+                    <div class="p-6">
+
+
+                        <span
+                            class="text-xs
+                                   bg-pink-100
+                                   text-pinkdark
+                                   px-3 py-1
+                                   rounded-full">
+
+                            Mathematics
+
+                        </span>
+
+
+                        <h3
+                            class="font-bold
+                                   text-lg mt-4">
+
+                            กิจกรรมคณิตศาสตร์
+
+                        </h3>
+
+
+                        <p
+                            class="text-gray-500
+                                   text-sm mt-2">
+
+                            ฝึกการคิดวิเคราะห์
+                            และการแก้โจทย์ปัญหา
+                            อย่างเป็นระบบ
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 4 -->
+
+                <div
+                    class="bg-white
+                           border
+                           rounded-2xl
+                           overflow-hidden
+                           card-hover">
+
+
+                    <img
+                        src="https://placehold.co/600x400/fce7f3/be185d?text=Robotics"
+                        alt="กิจกรรม Robotics"
+                        class="w-full h-52
+                               object-cover">
+
+
+                    <div class="p-6">
+
+
+                        <span
+                            class="text-xs
+                                   bg-pink-100
+                                   text-pinkdark
+                                   px-3 py-1
+                                   rounded-full">
+
+                            Technology
+
+                        </span>
+
+
+                        <h3
+                            class="font-bold
+                                   text-lg mt-4">
+
+                            กิจกรรม Robotics
+
+                        </h3>
+
+
+                        <p
+                            class="text-gray-500
+                                   text-sm mt-2">
+
+                            เรียนรู้พื้นฐานการออกแบบ
+                            และการทำงานของหุ่นยนต์
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 5 -->
+
+                <div
+                    class="bg-white
+                           border
+                           rounded-2xl
+                           overflow-hidden
+                           card-hover">
+
+
+                    <img
+                        src="https://placehold.co/600x400/fce7f3/be185d?text=Teamwork"
+                        alt="กิจกรรมการทำงานเป็นทีม"
+                        class="w-full h-52
+                               object-cover">
+
+
+                    <div class="p-6">
+
+
+                        <span
+                            class="text-xs
+                                   bg-pink-100
+                                   text-pinkdark
+                                   px-3 py-1
+                                   rounded-full">
+
+                            Teamwork
+
+                        </span>
+
+
+                        <h3
+                            class="font-bold
+                                   text-lg mt-4">
+
+                            กิจกรรมการทำงานเป็นทีม
+
+                        </h3>
+
+
+                        <p
+                            class="text-gray-500
+                                   text-sm mt-2">
+
+                            ฝึกการแบ่งหน้าที่
+                            การสื่อสาร และการแก้ปัญหา
+                            ร่วมกับสมาชิกในทีม
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 6 -->
+
+                <div
+                    class="bg-white
+                           border
+                           rounded-2xl
+                           overflow-hidden
+                           card-hover">
+
+
+                    <img
+                        src="https://placehold.co/600x400/fce7f3/be185d?text=Competition"
+                        alt="การแข่งขันทางวิชาการ"
+                        class="w-full h-52
+                               object-cover">
+
+
+                    <div class="p-6">
+
+
+                        <span
+                            class="text-xs
+                                   bg-pink-100
+                                   text-pinkdark
+                                   px-3 py-1
+                                   rounded-full">
+
+                            Competition
+
+                        </span>
+
+
+                        <h3
+                            class="font-bold
+                                   text-lg mt-4">
+
+                            การแข่งขันทางวิชาการ
+
+                        </h3>
+
+
+                        <p
+                            class="text-gray-500
+                                   text-sm mt-2">
+
+                            พัฒนาทักษะการคิดวิเคราะห์
+                            และการแก้ปัญหาภายใต้เวลาที่กำหนด
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 7 -->
+
+                <div
+                    class="bg-white
+                           border
+                           rounded-2xl
+                           overflow-hidden
+                           card-hover">
+
+
+                    <img
+                        src="https://placehold.co/600x400/fce7f3/be185d?text=English"
+                        alt="กิจกรรมภาษาอังกฤษ"
+                        class="w-full h-52
+                               object-cover">
+
+
+                    <div class="p-6">
+
+
+                        <span
+                            class="text-xs
+                                   bg-pink-100
+                                   text-pinkdark
+                                   px-3 py-1
+                                   rounded-full">
+
+                            English
+
+                        </span>
+
+
+                        <h3
+                            class="font-bold
+                                   text-lg mt-4">
+
+                            กิจกรรมพัฒนาภาษาอังกฤษ
+
+                        </h3>
+
+
+                        <p
+                            class="text-gray-500
+                                   text-sm mt-2">
+
+                            ฝึกทักษะการสื่อสาร
+                            การฟัง การพูด และการนำเสนอ
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 8 -->
+
+                <div
+                    class="bg-white
+                           border
+                           rounded-2xl
+                           overflow-hidden
+                           card-hover">
+
+
+                    <img
+                        src="https://placehold.co/600x400/fce7f3/be185d?text=Environment"
+                        alt="กิจกรรมสิ่งแวดล้อม"
+                        class="w-full h-52
+                               object-cover">
+
+
+                    <div class="p-6">
+
+
+                        <span
+                            class="text-xs
+                                   bg-pink-100
+                                   text-pinkdark
+                                   px-3 py-1
+                                   rounded-full">
+
+                            Environment
+
+                        </span>
+
+
+                        <h3
+                            class="font-bold
+                                   text-lg mt-4">
+
+                            กิจกรรมอนุรักษ์สิ่งแวดล้อม
+
+                        </h3>
+
+
+                        <p
+                            class="text-gray-500
+                                   text-sm mt-2">
+
+                            เรียนรู้แนวคิดการดูแลสิ่งแวดล้อม
+                            และการพัฒนาอย่างยั่งยืน
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 9 -->
+
+                <div
+                    class="bg-white
+                           border
+                           rounded-2xl
+                           overflow-hidden
+                           card-hover">
+
+
+                    <img
+                        src="https://placehold.co/600x400/fce7f3/be185d?text=Presentation"
+                        alt="กิจกรรมการนำเสนอ"
+                        class="w-full h-52
+                               object-cover">
+
+
+                    <div class="p-6">
+
+
+                        <span
+                            class="text-xs
+                                   bg-pink-100
+                                   text-pinkdark
+                                   px-3 py-1
+                                   rounded-full">
+
+                            Presentation
+
+                        </span>
+
+
+                        <h3
+                            class="font-bold
+                                   text-lg mt-4">
+
+                            การนำเสนอผลงาน
+
+                        </h3>
+
+
+                        <p
+                            class="text-gray-500
+                                   text-sm mt-2">
+
+                            ฝึกการสื่อสารและนำเสนอข้อมูล
+                            ต่อหน้าผู้อื่นอย่างมั่นใจ
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 10 -->
+
+                <div
+                    class="bg-white
+                           border
+                           rounded-2xl
+                           overflow-hidden
+                           card-hover">
+
+
+                    <img
+                        src="https://placehold.co/600x400/fce7f3/be185d?text=Future+Student"
+                        alt="เป้าหมายการศึกษาต่อ"
+                        class="w-full h-52
+                               object-cover">
+
+
+                    <div class="p-6">
+
+
+                        <span
+                            class="text-xs
+                                   bg-pink-100
+                                   text-pinkdark
+                                   px-3 py-1
+                                   rounded-full">
+
+                            Future Goal
+
+                        </span>
+
+
+                        <h3
+                            class="font-bold
+                                   text-lg mt-4">
+
+                            เตรียมความพร้อมสู่อนาคต
+
+                        </h3>
+
+
+                        <p
+                            class="text-gray-500
+                                   text-sm mt-2">
+
+                            วางแผนการเรียนและพัฒนาตนเอง
+                            เพื่อสอบเข้าโรงเรียนเตรียมอุดมศึกษา
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FUTURE GOAL
+    ====================================================== -->
+
+    <section
+        id="goal"
+        class="py-20
+               pink-gradient
+               text-white">
+
+
+        <div
+            class="max-w-4xl
+                   mx-auto
+                   px-6
+                   text-center">
+
+
+            <p
+                class="text-pink-100
+                       font-semibold">
+
+                MY FUTURE GOAL
+
+            </p>
+
+
+            <h2
+                class="text-3xl
+                       md:text-4xl
+                       font-bold
+                       mt-3">
+
+                เป้าหมายในอนาคต
+
+            </h2>
+
+
+            <p
+                class="mt-6
+                       text-pink-50
+                       leading-relaxed
+                       text-lg">
+
+                เป้าหมายของฉันคือการสอบเข้าเป็นนักเรียน
+                โรงเรียนเตรียมอุดมศึกษาในระดับชั้นมัธยมศึกษาปีที่ 4
+                เพื่อพัฒนาความรู้และทักษะด้านคณิตศาสตร์
+                วิทยาศาสตร์ ภาษา และการคิดวิเคราะห์
+                รวมถึงเตรียมความพร้อมสำหรับการศึกษาต่อ
+                ในระดับมหาวิทยาลัยและการก้าวเข้าสู่อนาคต
+                อย่างมั่นใจ
+
+            </p>
+
+
+            <div
+                class="mt-8
+                       inline-block
+                       bg-white
+                       text-pinkdark
+                       px-7 py-3
+                       rounded-full
+                       font-bold">
+
+                🎓 Future Triam Udom Student
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section
+        id="contact"
+        class="py-20
+               bg-white">
+
+
+        <div
+            class="max-w-5xl
+                   mx-auto
+                   px-6">
+
+
+            <div
+                class="text-center
+                       mb-12">
+
+
+                <p
+                    class="text-pinkmain
+                           font-semibold">
+
+                    CONTACT ME
+
+                </p>
+
+
+                <h2
+                    class="text-3xl
+                           md:text-4xl
+                           font-bold mt-2">
+
+                    ติดต่อ
+
+                </h2>
+
+
+                <div
+                    class="w-20 h-1
+                           bg-pinkmain
+                           mx-auto mt-4
+                           rounded-full">
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="grid md:grid-cols-3
+                       gap-6">
+
+
+                <!-- EMAIL -->
+
+                <div
+                    class="bg-pink-50
+                           rounded-2xl
+                           p-7
+                           text-center">
+
+
+                    <div class="text-3xl mb-3">
+                        ✉️
+                    </div>
+
+
+                    <h3 class="font-bold">
+                        Email
+                    </h3>
+
+
+                    <p
+                        class="text-gray-500
+                               text-sm mt-2">
+
+                        your-email@example.com
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div
+                    class="bg-pink-50
+                           rounded-2xl
+                           p-7
+                           text-center">
+
+
+                    <div class="text-3xl mb-3">
+                        📱
+                    </div>
+
+
+                    <h3 class="font-bold">
+                        โทรศัพท์
+                    </h3>
+
+
+                    <p
+                        class="text-gray-500
+                               text-sm mt-2">
+
+                        08X-XXX-XXXX
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- SCHOOL -->
+
+                <div
+                    class="bg-pink-50
+                           rounded-2xl
+                           p-7
+                           text-center">
+
+
+                    <div class="text-3xl mb-3">
+                        🏫
+                    </div>
+
+
+                    <h3 class="font-bold">
+                        โรงเรียน
+                    </h3>
+
+
+                    <p
+                        class="text-gray-500
+                               text-sm mt-2">
+
+                        จุฬาภรณราชวิทยาลัย กำแพงเพชร
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer
+        class="bg-pinkdark
+               text-white
+               py-8">
+
+
+        <div
+            class="max-w-7xl
+                   mx-auto
+                   px-6
+                   text-center">
+
+
+            <div
+                class="flex
+                       justify-center
+                       gap-6
+                       mb-4">
+
+
+                <a href="#"
+                   class="hover:text-pink-200
+                          transition">
+
+                    GitHub
+
+                </a>
+
+
+                <a href="#"
+                   class="hover:text-pink-200
+                          transition">
+
+                    Facebook
+
+                </a>
+
+
+                <a href="#"
+                   class="hover:text-pink-200
+                          transition">
+
+                    Instagram
+
+                </a>
+
+            </div>
+
+
+            <p
+                class="text-pink-100
+                       text-sm">
+
+                © 2026 ฐิติรัตน์ ปู่เกิด
+                | Student Portfolio
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        // =================================================
+        // MOBILE MENU
+        // =================================================
+
+        const menuBtn =
+            document.getElementById('menuBtn');
+
+        const mobileMenu =
+            document.getElementById('mobileMenu');
+
+
+        menuBtn.addEventListener(
+            'click',
+            function () {
+
+                mobileMenu.classList.toggle('hidden');
+
+            }
+        );
+
+
+        // =================================================
+        // CLOSE MOBILE MENU
+        // =================================================
+
+        const mobileLinks =
+            document.querySelectorAll('.mobile-link');
+
+
+        mobileLinks.forEach(
+            function (link) {
+
+                link.addEventListener(
+                    'click',
+                    function () {
+
+                        mobileMenu.classList.add('hidden');
+
+                    }
+                );
+
+            }
+        );
+
+
+        // =================================================
+        // SMOOTH SCROLL
+        // =================================================
+
+        document
+            .querySelectorAll('a[href^="#"]')
+            .forEach(
+                function (anchor) {
+
+                    anchor.addEventListener(
+                        'click',
+                        function (e) {
+
+                            const target =
+                                document.querySelector(
+                                    this.getAttribute('href')
+                                );
+
+
+                            if (target) {
+
+                                e.preventDefault();
+
+
+                                target.scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+    </script>
+
+</body>
+
+</html>
