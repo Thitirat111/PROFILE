@@ -7,257 +7,243 @@
 
     <title>ฐิติรัตน์ ปู่เกิด | Portfolio</title>
 
-    <!-- =====================================================
-         TAILWIND CSS
-    ====================================================== -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- =====================================================
-         GOOGLE FONT
-    ====================================================== -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
 
-
-    <!-- =====================================================
-         TAILWIND CONFIG
-    ====================================================== -->
+    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-
                     colors: {
-                        pinkmain: '#ec4899',
-                        pinklight: '#fce7f3',
-                        pinksoft: '#fdf2f8',
-                        pinkdark: '#be185d'
+                        pinkmain: '#F3AFC4',
+                        pinklight: '#FDEBF1',
+                        pinksoft: '#FFF8FA',
+                        pinkdark: '#B76E85'
                     },
 
                     fontFamily: {
                         thai: ['Noto Sans Thai', 'sans-serif']
                     }
-
                 }
             }
         }
     </script>
 
-
-    <!-- =====================================================
-         CUSTOM CSS
-    ====================================================== -->
+    <!-- Custom CSS -->
     <style>
-
         html {
             scroll-behavior: smooth;
         }
 
         body {
             font-family: 'Noto Sans Thai', sans-serif;
+            background-color: #fff8fa;
+            position: relative;
+        }
+
+        /* =========================================
+           TRIAM UDOM WATERMARK
+        ========================================= */
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+
+            background-image:
+                linear-gradient(
+                    rgba(255, 248, 250, 0.94),
+                    rgba(255, 255, 255, 0.94)
+                ),
+                url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk8nzvCm7pG5yadzzhO5vwaXB1LericgqOxfBGwUf8iw&s");
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 420px;
+
+            opacity: 0.75;
+
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        /* TRIAM UDOM TEXT WATERMARK */
+
+        body::after {
+            content: "TRIAM UDOM";
+
+            position: fixed;
+            top: 50%;
+            left: 50%;
+
+            transform:
+                translate(-50%, -50%)
+                rotate(-12deg);
+
+            font-size: clamp(55px, 9vw, 130px);
+            font-weight: 800;
+
+            letter-spacing: 12px;
+
+            color: #B76E85;
+
+            opacity: 0.10;
+
+            white-space: nowrap;
+
+            z-index: -1;
+            pointer-events: none;
         }
 
         /* Hero Background */
-        .hero-bg {
 
+        .hero-bg {
             background:
                 linear-gradient(
-                    rgba(236, 72, 153, 0.82),
-                    rgba(190, 24, 93, 0.90)
+                    rgba(255, 245, 248, 0.94),
+                    rgba(250, 220, 230, 0.96)
                 ),
-
-                url('https://placehold.co/1920x1080/fbcfe8/831843?text=Triam+Udom+Portfolio');
+                url('https://placehold.co/1920x1080/fff5f8/f3afc4?text=Triam+Udom+Portfolio');
 
             background-size: cover;
             background-position: center;
         }
 
-
         /* Glass Effect */
+
         .glass {
-
-            background: rgba(255, 255, 255, 0.90);
-
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(10px);
-
         }
 
-
         /* Pink Gradient */
-        .pink-gradient {
 
+        .pink-gradient {
             background:
                 linear-gradient(
                     135deg,
-                    #ec4899,
-                    #db2777,
-                    #be185d
+                    #FDEBF1,
+                    #F7C9D8,
+                    #F3AFC4
                 );
-
         }
-
 
         /* Card Animation */
+
         .card-hover {
-
             transition: all 0.3s ease;
-
         }
-
 
         .card-hover:hover {
-
             transform: translateY(-8px);
-
             box-shadow:
-                0 20px 35px rgba(236, 72, 153, 0.18);
-
+                0 20px 35px rgba(243, 175, 196, 0.20);
         }
-
 
         /* Mobile Menu Link */
+
         .mobile-link {
-
-            color: #374151;
-
+            color: #6B5560;
             font-weight: 500;
-
         }
 
-
         .mobile-link:hover {
-
-            color: #ec4899;
-
+            color: #B76E85;
         }
 
     </style>
 
 </head>
 
-
-<body class="bg-white text-gray-800">
-
+<body class="text-gray-700">
 
     <!-- =====================================================
          HEADER / NAVIGATION
     ====================================================== -->
 
-    <header
-        class="fixed top-0 left-0 w-full z-50
-               bg-white/95 backdrop-blur
-               shadow-sm">
+    <header class="fixed top-0 left-0 w-full z-50
+                   bg-white/95 backdrop-blur
+                   shadow-sm">
 
-        <nav
-            class="max-w-7xl mx-auto
+        <nav class="max-w-7xl mx-auto
                    px-5 py-4
                    flex items-center
                    justify-between">
 
-
             <!-- LOGO -->
 
             <a href="#home"
-               class="flex items-center gap-3">
+                class="flex items-center gap-3">
 
-                <div
-                    class="w-11 h-11 rounded-full
+                <div class="w-11 h-11 rounded-full
                            pink-gradient
-                           text-white
+                           text-pinkdark
                            flex items-center
                            justify-center
-                           font-bold text-lg">
+                           font-bold text-lg
+                           shadow-sm">
 
                     ฐ
 
                 </div>
 
-
                 <div>
 
-                    <h1
-                        class="font-bold text-pinkdark">
-
+                    <h1 class="font-bold text-pinkdark">
                         ฐิติรัตน์ ปู่เกิด
-
                     </h1>
 
-
-                    <p class="text-xs text-gray-500">
-
+                    <p class="text-xs text-gray-400">
                         Student Portfolio
-
                     </p>
 
                 </div>
 
             </a>
 
-
             <!-- DESKTOP MENU -->
 
-            <div
-                class="hidden md:flex
+            <div class="hidden md:flex
                        items-center gap-7
                        text-sm font-medium">
 
-                <a href="#home"
-                   class="hover:text-pinkmain transition">
-
+                <a href="#home" class="hover:text-pinkdark transition">
                     หน้าแรก
-
                 </a>
 
-
-                <a href="#about"
-                   class="hover:text-pinkmain transition">
-
+                <a href="#about" class="hover:text-pinkdark transition">
                     เกี่ยวกับฉัน
-
                 </a>
 
-
-                <a href="#skills"
-                   class="hover:text-pinkmain transition">
-
+                <a href="#skills" class="hover:text-pinkdark transition">
                     ทักษะ
-
                 </a>
 
-
-                <a href="#projects"
-                   class="hover:text-pinkmain transition">
-
+                <a href="#projects" class="hover:text-pinkdark transition">
                     ผลงาน
-
                 </a>
 
-
-                <a href="#goal"
-                   class="hover:text-pinkmain transition">
-
+                <a href="#goal" class="hover:text-pinkdark transition">
                     เป้าหมาย
-
                 </a>
 
-
-                <a href="#contact"
-                   class="hover:text-pinkmain transition">
-
+                <a href="#contact" class="hover:text-pinkdark transition">
                     ติดต่อ
-
                 </a>
 
             </div>
 
-
             <!-- MOBILE BUTTON -->
 
-            <button
-                id="menuBtn"
+            <button id="menuBtn"
                 class="md:hidden
                        text-pinkdark
                        text-2xl">
@@ -268,64 +254,38 @@
 
         </nav>
 
-
         <!-- MOBILE MENU -->
 
-        <div
-            id="mobileMenu"
+        <div id="mobileMenu"
             class="hidden md:hidden
-                   bg-white border-t">
+                   bg-white
+                   border-t border-pinklight">
 
-            <div
-                class="flex flex-col
+            <div class="flex flex-col
                        px-6 py-4 gap-4">
 
-
-                <a href="#home"
-                   class="mobile-link">
-
+                <a href="#home" class="mobile-link">
                     หน้าแรก
-
                 </a>
 
-
-                <a href="#about"
-                   class="mobile-link">
-
+                <a href="#about" class="mobile-link">
                     เกี่ยวกับฉัน
-
                 </a>
 
-
-                <a href="#skills"
-                   class="mobile-link">
-
+                <a href="#skills" class="mobile-link">
                     ทักษะ
-
                 </a>
 
-
-                <a href="#projects"
-                   class="mobile-link">
-
+                <a href="#projects" class="mobile-link">
                     ผลงาน
-
                 </a>
 
-
-                <a href="#goal"
-                   class="mobile-link">
-
+                <a href="#goal" class="mobile-link">
                     เป้าหมาย
-
                 </a>
 
-
-                <a href="#contact"
-                   class="mobile-link">
-
+                <a href="#contact" class="mobile-link">
                     ติดต่อ
-
                 </a>
 
             </div>
@@ -335,79 +295,65 @@
     </header>
 
 
-
     <!-- =====================================================
          HERO SECTION
     ====================================================== -->
 
-    <section
-        id="home"
+    <section id="home"
         class="hero-bg
                min-h-screen
                flex items-center
                pt-24">
 
-
-        <div
-            class="max-w-7xl
+        <div class="max-w-7xl
                    mx-auto
                    px-6
                    py-20
                    w-full">
 
-
-            <div
-                class="grid md:grid-cols-2
+            <div class="grid md:grid-cols-2
                        gap-12
                        items-center">
 
-
                 <!-- HERO TEXT -->
 
-                <div class="text-white">
+                <div>
 
-
-                    <p
-                        class="text-pink-100
-                               font-medium
+                    <p class="text-pinkdark
+                               font-semibold
                                mb-4">
 
                         STUDENT PORTFOLIO
 
                     </p>
 
-
-                    <h2
-                        class="text-4xl sm:text-5xl
+                    <h2 class="text-4xl sm:text-5xl
                                lg:text-6xl
                                font-extrabold
                                leading-tight
-                               mb-6">
+                               mb-6
+                               text-gray-800">
 
                         ฐิติรัตน์
 
                         <br>
 
-                        <span class="text-pink-100">
-
+                        <span class="text-pinkdark">
                             ปู่เกิด
-
                         </span>
 
                     </h2>
 
-
-                    <p
-                        class="text-xl sm:text-2xl
-                               font-medium mb-5">
+                    <p class="text-xl sm:text-2xl
+                               font-medium
+                               text-gray-700
+                               mb-5">
 
                         Dream Big • Learn More • Be Better
 
                     </p>
 
-
-                    <p
-                        class="text-pink-50
+                    <p class="text-gray-600
                                text-base sm:text-lg
                                leading-relaxed
                                max-w-xl
@@ -415,43 +361,38 @@
 
                         นักเรียนชั้นมัธยมศึกษาปีที่ 3
                         ผู้มีความสนใจด้านวิทยาศาสตร์
-                        คณิตศาสตร์ และการพัฒนาตนเอง
-                        พร้อมมุ่งมั่นก้าวเข้าสู่
+                        คณิตศาสตร์ อยากสอบเข้า
                         โรงเรียนเตรียมอุดมศึกษา
 
                     </p>
 
-
                     <!-- BUTTONS -->
 
-                    <div
-                        class="flex flex-wrap gap-4">
-
+                    <div class="flex flex-wrap gap-4">
 
                         <a href="#projects"
-                           class="bg-white
-                                  text-pinkdark
+                            class="bg-pinkmain
+                                  text-white
                                   px-7 py-3
                                   rounded-full
                                   font-bold
-                                  shadow-lg
-                                  hover:bg-pink-50
+                                  shadow-md
+                                  hover:bg-pinkdark
                                   transition">
 
                             ดูผลงานของฉัน
 
                         </a>
 
-
                         <a href="#about"
-                           class="border-2
-                                  border-white
-                                  text-white
+                            class="border-2
+                                  border-pinkmain
+                                  text-pinkdark
                                   px-7 py-3
                                   rounded-full
                                   font-bold
-                                  hover:bg-white
-                                  hover:text-pinkdark
+                                  hover:bg-pinkmain
+                                  hover:text-white
                                   transition">
 
                             รู้จักฉัน
@@ -463,47 +404,35 @@
                 </div>
 
 
-
                 <!-- PROFILE -->
 
-                <div
-                    class="flex justify-center">
-
+                <div class="flex justify-center">
 
                     <div class="relative">
 
-
-                        <div
-                            class="absolute inset-0
-                                   bg-pink-200
+                        <div class="absolute inset-0
+                                   bg-pinklight
                                    rounded-3xl
                                    rotate-6
-                                   opacity-50">
+                                   opacity-80">
                         </div>
 
-
-                        <div
-                            class="relative
+                        <div class="relative
                                    glass
                                    rounded-3xl
                                    p-5
-                                   shadow-2xl
-                                   max-w-sm">
-
+                                   shadow-xl
+                                   max-w-sm
+                                   border border-white">
 
                             <img
-                                src="https://placehold.co/500x600/fce7f3/be185d?text=Your+Photo"
+                                src="https://play-lh.googleusercontent.com/IsGL-FuaBq6J4diNHzgjmy8ilBnLvxE_gwNkjmUI9KVxb9hHCB1bYipHmrFhVcuuoLAWpFVkmfpsp6O--ePgwA"
                                 alt="รูปโปรไฟล์ ฐิติรัตน์ ปู่เกิด"
                                 class="rounded-2xl w-full">
 
+                            <div class="text-center py-4">
 
-                            <div
-                                class="text-center
-                                       py-4">
-
-
-                                <h3
-                                    class="font-bold
+                                <h3 class="font-bold
                                            text-xl
                                            text-pinkdark">
 
@@ -511,9 +440,7 @@
 
                                 </h3>
 
-
-                                <p
-                                    class="text-gray-500
+                                <p class="text-gray-400
                                            text-sm mt-1">
 
                                     นักเรียนชั้นมัธยมศึกษาปีที่ 3
@@ -535,25 +462,16 @@
     </section>
 
 
+    <!-- SCHOOL INFORMATION -->
 
-    <!-- =====================================================
-         SCHOOL INFORMATION
-    ====================================================== -->
+    <section class="bg-pinksoft py-8">
 
-    <section
-        class="bg-pink-50
-               py-8">
-
-
-        <div
-            class="max-w-5xl
+        <div class="max-w-5xl
                    mx-auto
                    px-6
                    text-center">
 
-
-            <p
-                class="text-sm
+            <p class="text-sm
                        text-pinkdark
                        mb-2">
 
@@ -561,9 +479,7 @@
 
             </p>
 
-
-            <h3
-                class="text-xl
+            <h3 class="text-xl
                        md:text-2xl
                        font-bold
                        text-gray-800">
@@ -572,10 +488,7 @@
 
             </h3>
 
-
-            <p
-                class="text-gray-500
-                       mt-2">
+            <p class="text-gray-400 mt-2">
 
                 Princess Chulabhorn Science High School
                 Kamphaeng Phet
@@ -587,87 +500,60 @@
     </section>
 
 
+    <!-- ABOUT ME -->
 
-    <!-- =====================================================
-         ABOUT ME
-    ====================================================== -->
-
-    <section
-        id="about"
+    <section id="about"
         class="py-20 bg-white">
 
-
-        <div
-            class="max-w-7xl
+        <div class="max-w-7xl
                    mx-auto
                    px-6">
 
+            <div class="text-center mb-14">
 
-            <!-- TITLE -->
-
-            <div
-                class="text-center
-                       mb-14">
-
-
-                <p
-                    class="text-pinkmain
+                <p class="text-pinkmain
                            font-semibold">
 
                     ABOUT ME
 
                 </p>
 
-
-                <h2
-                    class="text-3xl
+                <h2 class="text-3xl
                            md:text-4xl
-                           font-bold mt-2">
+                           font-bold
+                           mt-2
+                           text-gray-800">
 
                     เกี่ยวกับฉัน
 
                 </h2>
 
-
-                <div
-                    class="w-20 h-1
+                <div class="w-20 h-1
                            bg-pinkmain
                            mx-auto mt-4
                            rounded-full">
-
                 </div>
 
             </div>
 
-
-
-            <div
-                class="grid md:grid-cols-2
+            <div class="grid md:grid-cols-2
                        gap-12
                        items-center">
-
-
-                <!-- IMAGE -->
 
                 <div>
 
                     <img
-                        src="https://placehold.co/700x500/fce7f3/be185d?text=Student+Life"
+                        src="https://placehold.co/700x500/fff5f8/b76e85?text=Student+Life"
                         alt="กิจกรรมของนักเรียน"
                         class="rounded-3xl
-                               shadow-xl
+                               shadow-lg
                                w-full">
 
                 </div>
 
-
-                <!-- TEXT -->
-
                 <div>
 
-
-                    <h3
-                        class="text-2xl
+                    <h3 class="text-2xl
                                font-bold
                                text-pinkdark
                                mb-5">
@@ -677,9 +563,7 @@
 
                     </h3>
 
-
-                    <p
-                        class="text-gray-600
+                    <p class="text-gray-600
                                leading-relaxed
                                mb-5">
 
@@ -689,52 +573,29 @@
 
                     </p>
 
-
-                    <p
-                        class="text-gray-600
+                    <p class="text-gray-600
                                leading-relaxed
                                mb-5">
 
-                        ฉันเป็นคนที่มีความสนใจในการเรียนรู้สิ่งใหม่ ๆ
-                        โดยเฉพาะด้านวิทยาศาสตร์ คณิตศาสตร์
-                        เทคโนโลยี และกิจกรรมที่ช่วยพัฒนาทักษะ
-                        การคิดวิเคราะห์และการแก้ปัญหา
-
-                    </p>
-
-
-                    <p
-                        class="text-gray-600
-                               leading-relaxed">
-
-                        เป้าหมายของฉันคือการสอบเข้าเรียนต่อ
-                        โรงเรียนเตรียมอุดมศึกษา
-                        เพื่อพัฒนาศักยภาพของตนเอง
-                        และเตรียมความพร้อมสำหรับการศึกษาต่อ
+                        ฉันเป็นคนที่มีความสนใจในด้านคณิตศาสตร์และวิทยาศาสตร์
+                        โดยเป้าหมายของฉันคือการสอบเข้าเรียนต่อโรงเรียนเตรียมอุดมศึกษา
+                        เพื่อพัฒนาศักยภาพของตนเองและเตรียมความพร้อมสำหรับการศึกษาต่อ
                         ในระดับมหาวิทยาลัยในอนาคต
 
                     </p>
 
-
-                    <!-- QUOTE -->
-
-                    <div
-                        class="mt-7
+                    <div class="mt-7
                                border-l-4
                                border-pinkmain
-                               bg-pink-50
+                               bg-pinksoft
                                p-5
                                rounded-r-xl">
 
-
-                        <p
-                            class="text-pinkdark
+                        <p class="text-pinkdark
                                    font-medium
                                    italic">
 
-                            “ตั้งเป้าหมายให้ชัดเจน
-                            พยายามให้เต็มที่
-                            และไม่หยุดพัฒนาตัวเอง”
+                            “DENT”
 
                         </p>
 
@@ -749,75 +610,51 @@
     </section>
 
 
-
     <!-- =====================================================
          SKILLS
     ====================================================== -->
 
-    <section
-        id="skills"
-        class="py-20
-               bg-pink-50">
+    <section id="skills"
+        class="py-20 bg-pinksoft">
 
-
-        <div
-            class="max-w-7xl
+        <div class="max-w-7xl
                    mx-auto
                    px-6">
 
+            <div class="text-center mb-14">
 
-            <div
-                class="text-center
-                       mb-14">
-
-
-                <p
-                    class="text-pinkmain
-                           font-semibold">
-
+                <p class="text-pinkmain font-semibold">
                     MY SKILLS
-
                 </p>
 
-
-                <h2
-                    class="text-3xl
+                <h2 class="text-3xl
                            md:text-4xl
-                           font-bold mt-2">
+                           font-bold mt-2
+                           text-gray-800">
 
                     ทักษะและความสามารถ
 
                 </h2>
 
-
-                <div
-                    class="w-20 h-1
+                <div class="w-20 h-1
                            bg-pinkmain
                            mx-auto mt-4
                            rounded-full">
-
                 </div>
 
             </div>
 
-
-
-            <div
-                class="grid md:grid-cols-2
-                       gap-8">
-
+            <div class="grid md:grid-cols-2 gap-8">
 
                 <!-- ACADEMIC SKILLS -->
 
-                <div
-                    class="bg-white
+                <div class="bg-white
                            p-7
                            rounded-2xl
-                           shadow-sm">
+                           shadow-sm
+                           border border-pinklight">
 
-
-                    <h3
-                        class="text-xl
+                    <h3 class="text-xl
                                font-bold
                                mb-6
                                text-pinkdark">
@@ -826,97 +663,61 @@
 
                     </h3>
 
-
                     <!-- MATH -->
 
                     <div class="mb-6">
 
+                        <div class="flex justify-between mb-2">
 
-                        <div
-                            class="flex
-                                   justify-between
-                                   mb-2">
-
-
-                            <span
-                                class="font-medium">
-
+                            <span class="font-medium">
                                 คณิตศาสตร์
-
                             </span>
 
-
-                            <span
-                                class="text-pinkmain">
-
+                            <span class="text-pinkdark">
                                 85%
-
                             </span>
 
                         </div>
 
-
-                        <div
-                            class="h-3
-                                   bg-pink-100
+                        <div class="h-3
+                                   bg-pinklight
                                    rounded-full">
 
-
-                            <div
-                                class="h-3
+                            <div class="h-3
                                        bg-pinkmain
                                        rounded-full"
                                 style="width:85%">
-
                             </div>
 
                         </div>
 
                     </div>
-
 
 
                     <!-- SCIENCE -->
 
                     <div class="mb-6">
 
+                        <div class="flex justify-between mb-2">
 
-                        <div
-                            class="flex
-                                   justify-between
-                                   mb-2">
-
-
-                            <span
-                                class="font-medium">
-
+                            <span class="font-medium">
                                 วิทยาศาสตร์
-
                             </span>
 
-
-                            <span
-                                class="text-pinkmain">
-
+                            <span class="text-pinkdark">
                                 85%
-
                             </span>
 
                         </div>
 
-
-                        <div
-                            class="h-3
-                                   bg-pink-100
+                        <div class="h-3
+                                   bg-pinklight
                                    rounded-full">
 
-
-                            <div
-                                class="h-3
+                            <div class="h-3
                                        bg-pinkmain
                                        rounded-full"
                                 style="width:85%">
-
                             </div>
 
                         </div>
@@ -924,48 +725,30 @@
                     </div>
 
 
-
                     <!-- ENGLISH -->
 
                     <div>
 
+                        <div class="flex justify-between mb-2">
 
-                        <div
-                            class="flex
-                                   justify-between
-                                   mb-2">
-
-
-                            <span
-                                class="font-medium">
-
+                            <span class="font-medium">
                                 ภาษาอังกฤษ
-
                             </span>
 
-
-                            <span
-                                class="text-pinkmain">
-
+                            <span class="text-pinkdark">
                                 75%
-
                             </span>
 
                         </div>
 
-
-                        <div
-                            class="h-3
-                                   bg-pink-100
+                        <div class="h-3
+                                   bg-pinklight
                                    rounded-full">
 
-
-                            <div
-                                class="h-3
+                            <div class="h-3
                                        bg-pinkmain
                                        rounded-full"
                                 style="width:75%">
-
                             </div>
 
                         </div>
@@ -975,18 +758,15 @@
                 </div>
 
 
-
                 <!-- OTHER SKILLS -->
 
-                <div
-                    class="bg-white
+                <div class="bg-white
                            p-7
                            rounded-2xl
-                           shadow-sm">
+                           shadow-sm
+                           border border-pinklight">
 
-
-                    <h3
-                        class="text-xl
+                    <h3 class="text-xl
                                font-bold
                                mb-6
                                text-pinkdark">
@@ -995,87 +775,55 @@
 
                     </h3>
 
+                    <div class="flex flex-wrap gap-3">
 
-                    <div
-                        class="flex
-                               flex-wrap
-                               gap-3">
-
-
-                        <span
-                            class="px-4 py-2
-                                   bg-pink-100
+                        <span class="px-4 py-2
+                                   bg-pinklight
                                    text-pinkdark
                                    rounded-full">
-
                             Problem Solving
-
                         </span>
 
-
-                        <span
-                            class="px-4 py-2
-                                   bg-pink-100
+                        <span class="px-4 py-2
+                                   bg-pinklight
                                    text-pinkdark
                                    rounded-full">
-
                             Teamwork
-
                         </span>
 
-
-                        <span
-                            class="px-4 py-2
-                                   bg-pink-100
+                        <span class="px-4 py-2
+                                   bg-pinklight
                                    text-pinkdark
                                    rounded-full">
-
                             Communication
-
                         </span>
 
-
-                        <span
-                            class="px-4 py-2
-                                   bg-pink-100
+                        <span class="px-4 py-2
+                                   bg-pinklight
                                    text-pinkdark
                                    rounded-full">
-
                             Creativity
-
                         </span>
 
-
-                        <span
-                            class="px-4 py-2
-                                   bg-pink-100
+                        <span class="px-4 py-2
+                                   bg-pinklight
                                    text-pinkdark
                                    rounded-full">
-
                             STEM
-
                         </span>
 
-
-                        <span
-                            class="px-4 py-2
-                                   bg-pink-100
+                        <span class="px-4 py-2
+                                   bg-pinklight
                                    text-pinkdark
                                    rounded-full">
-
                             Presentation
-
                         </span>
 
-
-                        <span
-                            class="px-4 py-2
-                                   bg-pink-100
+                        <span class="px-4 py-2
+                                   bg-pinklight
                                    text-pinkdark
                                    rounded-full">
-
                             Leadership
-
                         </span>
 
                     </div>
@@ -1089,104 +837,71 @@
     </section>
 
 
-
     <!-- =====================================================
-         PROJECTS / ACTIVITIES
+         PROJECTS
     ====================================================== -->
 
-    <section
-        id="projects"
-        class="py-20
-               bg-white">
+    <section id="projects"
+        class="py-20 bg-white">
 
-
-        <div
-            class="max-w-7xl
+        <div class="max-w-7xl
                    mx-auto
                    px-6">
 
+            <div class="text-center mb-14">
 
-            <!-- TITLE -->
-
-            <div
-                class="text-center
-                       mb-14">
-
-
-                <p
-                    class="text-pinkmain
-                           font-semibold">
-
+                <p class="text-pinkmain font-semibold">
                     MY PORTFOLIO
-
                 </p>
 
-
-                <h2
-                    class="text-3xl
+                <h2 class="text-3xl
                            md:text-4xl
-                           font-bold mt-2">
+                           font-bold mt-2
+                           text-gray-800">
 
                     ผลงานและกิจกรรม
 
                 </h2>
 
-
-                <p
-                    class="text-gray-500
-                           mt-4">
+                <p class="text-gray-400 mt-4">
 
                     ผลงานและกิจกรรมที่แสดงถึงความสนใจ
                     ความสามารถ และการพัฒนาตนเอง
 
                 </p>
 
-
-                <div
-                    class="w-20 h-1
+                <div class="w-20 h-1
                            bg-pinkmain
                            mx-auto mt-4
                            rounded-full">
-
                 </div>
 
             </div>
 
 
-
-            <!-- PROJECT GRID -->
-
-            <div
-                class="grid
+            <div class="grid
                        sm:grid-cols-2
                        lg:grid-cols-3
                        gap-7">
 
 
+                <!-- PROJECT CARD 1 -->
 
-                <!-- PROJECT 1 -->
-
-                <div
-                    class="bg-white
-                           border
+                <div class="bg-white
+                           border border-pinklight
                            rounded-2xl
                            overflow-hidden
                            card-hover">
 
-
                     <img
-                        src="https://placehold.co/600x400/fce7f3/be185d?text=Science+Project"
+                        src="https://placehold.co/600x400/fff5f8/b76e85?text=Science+Project"
                         alt="โครงงานวิทยาศาสตร์"
-                        class="w-full h-52
-                               object-cover">
-
+                        class="w-full h-52 object-cover">
 
                     <div class="p-6">
 
-
-                        <span
-                            class="text-xs
-                                   bg-pink-100
+                        <span class="text-xs
+                                   bg-pinklight
                                    text-pinkdark
                                    px-3 py-1
                                    rounded-full">
@@ -1195,18 +910,14 @@
 
                         </span>
 
-
-                        <h3
-                            class="font-bold
+                        <h3 class="font-bold
                                    text-lg mt-4">
 
                             โครงงานวิทยาศาสตร์
 
                         </h3>
 
-
-                        <p
-                            class="text-gray-500
+                        <p class="text-gray-500
                                    text-sm mt-2">
 
                             ฝึกกระบวนการตั้งสมมติฐาน
@@ -1220,56 +931,29 @@
                 </div>
 
 
+                <!-- PROJECT CARD 2 -->
 
-                <!-- PROJECT 2 -->
-
-                <div
-                    class="bg-white
-                           border
-                           rounded-2xl
-                           overflow-hidden
-                           card-hover">
-
+                <div class="bg-white border border-pinklight rounded-2xl overflow-hidden card-hover">
 
                     <img
-                        src="https://placehold.co/600x400/fce7f3/be185d?text=STEM+Camp"
+                        src="https://placehold.co/600x400/fff5f8/b76e85?text=STEM+Camp"
                         alt="ค่าย STEM"
-                        class="w-full h-52
-                               object-cover">
-
+                        class="w-full h-52 object-cover">
 
                     <div class="p-6">
 
-
-                        <span
-                            class="text-xs
-                                   bg-pink-100
-                                   text-pinkdark
-                                   px-3 py-1
-                                   rounded-full">
-
+                        <span class="text-xs bg-pinklight text-pinkdark px-3 py-1 rounded-full">
                             Activity
-
                         </span>
 
-
-                        <h3
-                            class="font-bold
-                                   text-lg mt-4">
-
+                        <h3 class="font-bold text-lg mt-4">
                             เข้าร่วมค่าย STEM
-
                         </h3>
 
-
-                        <p
-                            class="text-gray-500
-                                   text-sm mt-2">
-
+                        <p class="text-gray-500 text-sm mt-2">
                             เรียนรู้การประยุกต์ใช้
                             วิทยาศาสตร์ เทคโนโลยี
                             และการทำงานร่วมกับผู้อื่น
-
                         </p>
 
                     </div>
@@ -1277,56 +961,29 @@
                 </div>
 
 
+                <!-- PROJECT CARD 3 -->
 
-                <!-- PROJECT 3 -->
-
-                <div
-                    class="bg-white
-                           border
-                           rounded-2xl
-                           overflow-hidden
-                           card-hover">
-
+                <div class="bg-white border border-pinklight rounded-2xl overflow-hidden card-hover">
 
                     <img
-                        src="https://placehold.co/600x400/fce7f3/be185d?text=Mathematics"
+                        src="https://placehold.co/600x400/fff5f8/b76e85?text=Mathematics"
                         alt="กิจกรรมคณิตศาสตร์"
-                        class="w-full h-52
-                               object-cover">
-
+                        class="w-full h-52 object-cover">
 
                     <div class="p-6">
 
-
-                        <span
-                            class="text-xs
-                                   bg-pink-100
-                                   text-pinkdark
-                                   px-3 py-1
-                                   rounded-full">
-
+                        <span class="text-xs bg-pinklight text-pinkdark px-3 py-1 rounded-full">
                             Mathematics
-
                         </span>
 
-
-                        <h3
-                            class="font-bold
-                                   text-lg mt-4">
-
+                        <h3 class="font-bold text-lg mt-4">
                             กิจกรรมคณิตศาสตร์
-
                         </h3>
 
-
-                        <p
-                            class="text-gray-500
-                                   text-sm mt-2">
-
+                        <p class="text-gray-500 text-sm mt-2">
                             ฝึกการคิดวิเคราะห์
                             และการแก้โจทย์ปัญหา
                             อย่างเป็นระบบ
-
                         </p>
 
                     </div>
@@ -1334,55 +991,28 @@
                 </div>
 
 
+                <!-- PROJECT CARD 4 -->
 
-                <!-- PROJECT 4 -->
-
-                <div
-                    class="bg-white
-                           border
-                           rounded-2xl
-                           overflow-hidden
-                           card-hover">
-
+                <div class="bg-white border border-pinklight rounded-2xl overflow-hidden card-hover">
 
                     <img
-                        src="https://placehold.co/600x400/fce7f3/be185d?text=Robotics"
+                        src="https://placehold.co/600x400/fff5f8/b76e85?text=Robotics"
                         alt="กิจกรรม Robotics"
-                        class="w-full h-52
-                               object-cover">
-
+                        class="w-full h-52 object-cover">
 
                     <div class="p-6">
 
-
-                        <span
-                            class="text-xs
-                                   bg-pink-100
-                                   text-pinkdark
-                                   px-3 py-1
-                                   rounded-full">
-
+                        <span class="text-xs bg-pinklight text-pinkdark px-3 py-1 rounded-full">
                             Technology
-
                         </span>
 
-
-                        <h3
-                            class="font-bold
-                                   text-lg mt-4">
-
+                        <h3 class="font-bold text-lg mt-4">
                             กิจกรรม Robotics
-
                         </h3>
 
-
-                        <p
-                            class="text-gray-500
-                                   text-sm mt-2">
-
+                        <p class="text-gray-500 text-sm mt-2">
                             เรียนรู้พื้นฐานการออกแบบ
                             และการทำงานของหุ่นยนต์
-
                         </p>
 
                     </div>
@@ -1390,56 +1020,29 @@
                 </div>
 
 
+                <!-- PROJECT CARD 5 -->
 
-                <!-- PROJECT 5 -->
-
-                <div
-                    class="bg-white
-                           border
-                           rounded-2xl
-                           overflow-hidden
-                           card-hover">
-
+                <div class="bg-white border border-pinklight rounded-2xl overflow-hidden card-hover">
 
                     <img
-                        src="https://placehold.co/600x400/fce7f3/be185d?text=Teamwork"
+                        src="https://placehold.co/600x400/fff5f8/b76e85?text=Teamwork"
                         alt="กิจกรรมการทำงานเป็นทีม"
-                        class="w-full h-52
-                               object-cover">
-
+                        class="w-full h-52 object-cover">
 
                     <div class="p-6">
 
-
-                        <span
-                            class="text-xs
-                                   bg-pink-100
-                                   text-pinkdark
-                                   px-3 py-1
-                                   rounded-full">
-
+                        <span class="text-xs bg-pinklight text-pinkdark px-3 py-1 rounded-full">
                             Teamwork
-
                         </span>
 
-
-                        <h3
-                            class="font-bold
-                                   text-lg mt-4">
-
+                        <h3 class="font-bold text-lg mt-4">
                             กิจกรรมการทำงานเป็นทีม
-
                         </h3>
 
-
-                        <p
-                            class="text-gray-500
-                                   text-sm mt-2">
-
+                        <p class="text-gray-500 text-sm mt-2">
                             ฝึกการแบ่งหน้าที่
                             การสื่อสาร และการแก้ปัญหา
                             ร่วมกับสมาชิกในทีม
-
                         </p>
 
                     </div>
@@ -1447,55 +1050,28 @@
                 </div>
 
 
+                <!-- PROJECT CARD 6 -->
 
-                <!-- PROJECT 6 -->
-
-                <div
-                    class="bg-white
-                           border
-                           rounded-2xl
-                           overflow-hidden
-                           card-hover">
-
+                <div class="bg-white border border-pinklight rounded-2xl overflow-hidden card-hover">
 
                     <img
-                        src="https://placehold.co/600x400/fce7f3/be185d?text=Competition"
+                        src="https://placehold.co/600x400/fff5f8/b76e85?text=Competition"
                         alt="การแข่งขันทางวิชาการ"
-                        class="w-full h-52
-                               object-cover">
-
+                        class="w-full h-52 object-cover">
 
                     <div class="p-6">
 
-
-                        <span
-                            class="text-xs
-                                   bg-pink-100
-                                   text-pinkdark
-                                   px-3 py-1
-                                   rounded-full">
-
+                        <span class="text-xs bg-pinklight text-pinkdark px-3 py-1 rounded-full">
                             Competition
-
                         </span>
 
-
-                        <h3
-                            class="font-bold
-                                   text-lg mt-4">
-
+                        <h3 class="font-bold text-lg mt-4">
                             การแข่งขันทางวิชาการ
-
                         </h3>
 
-
-                        <p
-                            class="text-gray-500
-                                   text-sm mt-2">
-
+                        <p class="text-gray-500 text-sm mt-2">
                             พัฒนาทักษะการคิดวิเคราะห์
                             และการแก้ปัญหาภายใต้เวลาที่กำหนด
-
                         </p>
 
                     </div>
@@ -1503,55 +1079,28 @@
                 </div>
 
 
+                <!-- PROJECT CARD 7 -->
 
-                <!-- PROJECT 7 -->
-
-                <div
-                    class="bg-white
-                           border
-                           rounded-2xl
-                           overflow-hidden
-                           card-hover">
-
+                <div class="bg-white border border-pinklight rounded-2xl overflow-hidden card-hover">
 
                     <img
-                        src="https://placehold.co/600x400/fce7f3/be185d?text=English"
+                        src="https://placehold.co/600x400/fff5f8/b76e85?text=English"
                         alt="กิจกรรมภาษาอังกฤษ"
-                        class="w-full h-52
-                               object-cover">
-
+                        class="w-full h-52 object-cover">
 
                     <div class="p-6">
 
-
-                        <span
-                            class="text-xs
-                                   bg-pink-100
-                                   text-pinkdark
-                                   px-3 py-1
-                                   rounded-full">
-
+                        <span class="text-xs bg-pinklight text-pinkdark px-3 py-1 rounded-full">
                             English
-
                         </span>
 
-
-                        <h3
-                            class="font-bold
-                                   text-lg mt-4">
-
+                        <h3 class="font-bold text-lg mt-4">
                             กิจกรรมพัฒนาภาษาอังกฤษ
-
                         </h3>
 
-
-                        <p
-                            class="text-gray-500
-                                   text-sm mt-2">
-
+                        <p class="text-gray-500 text-sm mt-2">
                             ฝึกทักษะการสื่อสาร
                             การฟัง การพูด และการนำเสนอ
-
                         </p>
 
                     </div>
@@ -1559,55 +1108,28 @@
                 </div>
 
 
+                <!-- PROJECT CARD 8 -->
 
-                <!-- PROJECT 8 -->
-
-                <div
-                    class="bg-white
-                           border
-                           rounded-2xl
-                           overflow-hidden
-                           card-hover">
-
+                <div class="bg-white border border-pinklight rounded-2xl overflow-hidden card-hover">
 
                     <img
-                        src="https://placehold.co/600x400/fce7f3/be185d?text=Environment"
+                        src="https://placehold.co/600x400/fff5f8/b76e85?text=Environment"
                         alt="กิจกรรมสิ่งแวดล้อม"
-                        class="w-full h-52
-                               object-cover">
-
+                        class="w-full h-52 object-cover">
 
                     <div class="p-6">
 
-
-                        <span
-                            class="text-xs
-                                   bg-pink-100
-                                   text-pinkdark
-                                   px-3 py-1
-                                   rounded-full">
-
+                        <span class="text-xs bg-pinklight text-pinkdark px-3 py-1 rounded-full">
                             Environment
-
                         </span>
 
-
-                        <h3
-                            class="font-bold
-                                   text-lg mt-4">
-
+                        <h3 class="font-bold text-lg mt-4">
                             กิจกรรมอนุรักษ์สิ่งแวดล้อม
-
                         </h3>
 
-
-                        <p
-                            class="text-gray-500
-                                   text-sm mt-2">
-
+                        <p class="text-gray-500 text-sm mt-2">
                             เรียนรู้แนวคิดการดูแลสิ่งแวดล้อม
                             และการพัฒนาอย่างยั่งยืน
-
                         </p>
 
                     </div>
@@ -1615,55 +1137,28 @@
                 </div>
 
 
+                <!-- PROJECT CARD 9 -->
 
-                <!-- PROJECT 9 -->
-
-                <div
-                    class="bg-white
-                           border
-                           rounded-2xl
-                           overflow-hidden
-                           card-hover">
-
+                <div class="bg-white border border-pinklight rounded-2xl overflow-hidden card-hover">
 
                     <img
-                        src="https://placehold.co/600x400/fce7f3/be185d?text=Presentation"
+                        src="https://placehold.co/600x400/fff5f8/b76e85?text=Presentation"
                         alt="กิจกรรมการนำเสนอ"
-                        class="w-full h-52
-                               object-cover">
-
+                        class="w-full h-52 object-cover">
 
                     <div class="p-6">
 
-
-                        <span
-                            class="text-xs
-                                   bg-pink-100
-                                   text-pinkdark
-                                   px-3 py-1
-                                   rounded-full">
-
+                        <span class="text-xs bg-pinklight text-pinkdark px-3 py-1 rounded-full">
                             Presentation
-
                         </span>
 
-
-                        <h3
-                            class="font-bold
-                                   text-lg mt-4">
-
+                        <h3 class="font-bold text-lg mt-4">
                             การนำเสนอผลงาน
-
                         </h3>
 
-
-                        <p
-                            class="text-gray-500
-                                   text-sm mt-2">
-
+                        <p class="text-gray-500 text-sm mt-2">
                             ฝึกการสื่อสารและนำเสนอข้อมูล
                             ต่อหน้าผู้อื่นอย่างมั่นใจ
-
                         </p>
 
                     </div>
@@ -1671,55 +1166,28 @@
                 </div>
 
 
+                <!-- PROJECT CARD 10 -->
 
-                <!-- PROJECT 10 -->
-
-                <div
-                    class="bg-white
-                           border
-                           rounded-2xl
-                           overflow-hidden
-                           card-hover">
-
+                <div class="bg-white border border-pinklight rounded-2xl overflow-hidden card-hover">
 
                     <img
-                        src="https://placehold.co/600x400/fce7f3/be185d?text=Future+Student"
+                        src="https://placehold.co/600x400/fff5f8/b76e85?text=Future+Student"
                         alt="เป้าหมายการศึกษาต่อ"
-                        class="w-full h-52
-                               object-cover">
-
+                        class="w-full h-52 object-cover">
 
                     <div class="p-6">
 
-
-                        <span
-                            class="text-xs
-                                   bg-pink-100
-                                   text-pinkdark
-                                   px-3 py-1
-                                   rounded-full">
-
+                        <span class="text-xs bg-pinklight text-pinkdark px-3 py-1 rounded-full">
                             Future Goal
-
                         </span>
 
-
-                        <h3
-                            class="font-bold
-                                   text-lg mt-4">
-
+                        <h3 class="font-bold text-lg mt-4">
                             เตรียมความพร้อมสู่อนาคต
-
                         </h3>
 
-
-                        <p
-                            class="text-gray-500
-                                   text-sm mt-2">
-
+                        <p class="text-gray-500 text-sm mt-2">
                             วางแผนการเรียนและพัฒนาตนเอง
                             เพื่อสอบเข้าโรงเรียนเตรียมอุดมศึกษา
-
                         </p>
 
                     </div>
@@ -1733,48 +1201,34 @@
     </section>
 
 
-
     <!-- =====================================================
          FUTURE GOAL
     ====================================================== -->
 
-    <section
-        id="goal"
-        class="py-20
-               pink-gradient
-               text-white">
+    <section id="goal"
+        class="py-20 pink-gradient text-gray-700">
 
-
-        <div
-            class="max-w-4xl
+        <div class="max-w-4xl
                    mx-auto
                    px-6
                    text-center">
 
-
-            <p
-                class="text-pink-100
-                       font-semibold">
-
+            <p class="text-pinkdark font-semibold">
                 MY FUTURE GOAL
-
             </p>
 
-
-            <h2
-                class="text-3xl
+            <h2 class="text-3xl
                        md:text-4xl
                        font-bold
-                       mt-3">
+                       mt-3
+                       text-gray-800">
 
                 เป้าหมายในอนาคต
 
             </h2>
 
-
-            <p
-                class="mt-6
-                       text-pink-50
+            <p class="mt-6
+                       text-gray-600
                        leading-relaxed
                        text-lg">
 
@@ -1788,15 +1242,14 @@
 
             </p>
 
-
-            <div
-                class="mt-8
+            <div class="mt-8
                        inline-block
                        bg-white
                        text-pinkdark
                        px-7 py-3
                        rounded-full
-                       font-bold">
+                       font-bold
+                       shadow-sm">
 
                 🎓 Future Triam Udom Student
 
@@ -1807,151 +1260,106 @@
     </section>
 
 
-
     <!-- =====================================================
          CONTACT
     ====================================================== -->
 
-    <section
-        id="contact"
-        class="py-20
-               bg-white">
+    <section id="contact"
+        class="py-20 bg-white">
 
-
-        <div
-            class="max-w-5xl
+        <div class="max-w-5xl
                    mx-auto
                    px-6">
 
+            <div class="text-center mb-12">
 
-            <div
-                class="text-center
-                       mb-12">
-
-
-                <p
-                    class="text-pinkmain
-                           font-semibold">
-
+                <p class="text-pinkmain font-semibold">
                     CONTACT ME
-
                 </p>
 
-
-                <h2
-                    class="text-3xl
+                <h2 class="text-3xl
                            md:text-4xl
-                           font-bold mt-2">
+                           font-bold mt-2
+                           text-gray-800">
 
                     ติดต่อ
 
                 </h2>
 
-
-                <div
-                    class="w-20 h-1
+                <div class="w-20 h-1
                            bg-pinkmain
                            mx-auto mt-4
                            rounded-full">
-
                 </div>
 
             </div>
 
-
-
-            <div
-                class="grid md:grid-cols-3
-                       gap-6">
-
+            <div class="grid md:grid-cols-3 gap-6">
 
                 <!-- EMAIL -->
 
-                <div
-                    class="bg-pink-50
+                <div class="bg-pinksoft
+                           border border-pinklight
                            rounded-2xl
                            p-7
                            text-center">
-
 
                     <div class="text-3xl mb-3">
                         ✉️
                     </div>
 
-
                     <h3 class="font-bold">
                         Email
                     </h3>
 
-
-                    <p
-                        class="text-gray-500
-                               text-sm mt-2">
-
-                        your-email@example.com
-
+                    <p class="text-gray-500 text-sm mt-2">
+                        thitirat.pug@pccpl.ac.th
                     </p>
 
                 </div>
 
 
-
                 <!-- PHONE -->
 
-                <div
-                    class="bg-pink-50
+                <div class="bg-pinksoft
+                           border border-pinklight
                            rounded-2xl
                            p-7
                            text-center">
-
 
                     <div class="text-3xl mb-3">
                         📱
                     </div>
 
-
                     <h3 class="font-bold">
                         โทรศัพท์
                     </h3>
 
-
-                    <p
-                        class="text-gray-500
-                               text-sm mt-2">
-
-                        08X-XXX-XXXX
-
+                    <p class="text-gray-500 text-sm mt-2">
+                        091-840-6459
                     </p>
 
                 </div>
 
 
-
                 <!-- SCHOOL -->
 
-                <div
-                    class="bg-pink-50
+                <div class="bg-pinksoft
+                           border border-pinklight
                            rounded-2xl
                            p-7
                            text-center">
-
 
                     <div class="text-3xl mb-3">
                         🏫
                     </div>
 
-
                     <h3 class="font-bold">
                         โรงเรียน
                     </h3>
 
-
-                    <p
-                        class="text-gray-500
-                               text-sm mt-2">
-
+                    <p class="text-gray-500 text-sm mt-2">
                         จุฬาภรณราชวิทยาลัย กำแพงเพชร
-
                     </p>
 
                 </div>
@@ -1963,73 +1371,50 @@
     </section>
 
 
-
     <!-- =====================================================
          FOOTER
     ====================================================== -->
 
-    <footer
-        class="bg-pinkdark
-               text-white
-               py-8">
+    <footer class="bg-pinksoft
+                   border-t border-pinklight
+                   text-pinkdark
+                   py-8">
 
-
-        <div
-            class="max-w-7xl
+        <div class="max-w-7xl
                    mx-auto
                    px-6
                    text-center">
 
-
-            <div
-                class="flex
+            <div class="flex
                        justify-center
                        gap-6
                        mb-4">
 
-
                 <a href="#"
-                   class="hover:text-pink-200
-                          transition">
-
+                    class="hover:text-pinkmain transition">
                     GitHub
-
                 </a>
 
-
                 <a href="#"
-                   class="hover:text-pink-200
-                          transition">
-
+                    class="hover:text-pinkmain transition">
                     Facebook
-
                 </a>
 
-
                 <a href="#"
-                   class="hover:text-pink-200
-                          transition">
-
+                    class="hover:text-pinkmain transition">
                     Instagram
-
                 </a>
 
             </div>
 
-
-            <p
-                class="text-pink-100
-                       text-sm">
-
+            <p class="text-gray-400 text-sm">
                 © 2026 ฐิติรัตน์ ปู่เกิด
                 | Student Portfolio
-
             </p>
 
         </div>
 
     </footer>
-
 
 
     <!-- =====================================================
@@ -2038,16 +1423,13 @@
 
     <script>
 
-        // =================================================
         // MOBILE MENU
-        // =================================================
 
         const menuBtn =
             document.getElementById('menuBtn');
 
         const mobileMenu =
             document.getElementById('mobileMenu');
-
 
         menuBtn.addEventListener(
             'click',
@@ -2059,13 +1441,10 @@
         );
 
 
-        // =================================================
         // CLOSE MOBILE MENU
-        // =================================================
 
         const mobileLinks =
             document.querySelectorAll('.mobile-link');
-
 
         mobileLinks.forEach(
             function (link) {
@@ -2083,9 +1462,7 @@
         );
 
 
-        // =================================================
         // SMOOTH SCROLL
-        // =================================================
 
         document
             .querySelectorAll('a[href^="#"]')
@@ -2101,11 +1478,9 @@
                                     this.getAttribute('href')
                                 );
 
-
                             if (target) {
 
                                 e.preventDefault();
-
 
                                 target.scrollIntoView({
                                     behavior: 'smooth'
